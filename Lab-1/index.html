@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Event Dashboard</title>
+    <link rel="stylesheet" href="STYLE.CSS">
+</head>
+<body>
+
+    <header>
+        <h1> 🎯Smart Event Dashboard</h1>
+    </header>
+
+    <main class="container">
+        <section class="card add-event">
+            <h2>Add New Event</h2>
+            <form id="eventForm">
+                <label>Event Title:</label>
+                <input type="text" id="eventTitle" required>
+
+                <label>Event Date:</label>
+                <input type="date" id="eventDate" required>
+
+                <label>Category:</label>
+                <select id="eventCategory">
+                    <option value="Conference">Conference</option>
+                    <option value="Workshop">Workshop</option>
+                    <option value="Meetup">Meetup</option>
+                </select>
+
+                <label>Description:</label>
+                <textarea id="eventDescription" rows="4"></textarea>
+
+                <button type="submit" class="btn-primary">Add Event</button>
+            </form>
+        </section>
+
+        <section class="card my-events">
+            <h2>My Events</h2>
+            <div class="action-buttons">
+                <button id="clearBtn" class="btn-secondary">Clear All Events</button>
+                <button id="sampleBtn" class="btn-secondary">Add Sample Events</button>
+            </div>
+            <div id="eventList" class="event-display">
+                <p class="empty-msg">No events yet. Add your first event!</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="SCRIPT.JS"></script>
+</body>
+</html>
